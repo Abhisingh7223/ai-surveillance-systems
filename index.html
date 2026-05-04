@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AI Surveillance System</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- TensorFlow -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+</head>
+
+<body>
+
+  <!-- Background -->
+  <div class="starfield"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <h1 class="site-title">🚨 AI Surveillance</h1>
+    <p class="site-tagline">Real-Time Suspicious Activity Detection</p>
+  </header>
+
+  <!-- Main -->
+  <main class="content">
+    <section class="camera-panel">
+
+      <video
+        id="webcam"
+        class="camera-stream"
+        autoplay
+        playsinline
+        muted>
+      </video>
+
+      <canvas
+        id="overlay-canvas"
+        class="detection-overlay">
+      </canvas>
+
+    </section>
+
+    <div id="status" class="status">Loading AI Model...</div>
+  </main>
+
+  <!-- Clean Footer -->
+  <footer class="site-footer">
+    <p>© 2026 AI Security System</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+
+</body>
+</html>
